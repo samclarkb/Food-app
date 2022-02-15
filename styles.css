@@ -90,7 +90,8 @@ main > div:nth-of-type(2) > div:nth-of-type(2) {
 
 main > div:nth-of-type(2) > div:nth-of-type(3) {
 	/* background-color: lightgrey; */
-	height: 45vh;
+	/* height: 45vh; */
+	width: 70vw;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
