@@ -20,7 +20,7 @@
 ## :bulb: Concept
 
 
-## :chart_with_upwards_trend: Proces 
+## :chart_with_upwards_trend: Process
 
 Are you interested in my proces of making the application? Click here!
 
