@@ -1,6 +1,7 @@
 import { dataOphalen } from './fetch.js'
+import { enableButton } from './ui.js'
 
-async function detect() {
+export async function detect() {
 	const barcodeDetector = new BarcodeDetector()
 	const list = document.querySelector('main>div:nth-of-type(2)>div:nth-of-type(1)')
 	let itemsFound = []
@@ -12,7 +13,7 @@ async function detect() {
 
 	const video = document.createElement('video')
 	video.srcObject = mediaStream
-	video.autoplay = true
+	await video.play()
 
 	list.append(video)
 
@@ -26,6 +27,9 @@ async function detect() {
 						barcodeValue = barcode.rawValue
 						dataOphalen(barcodeValue)
 						video.remove()
+						enableButton()
+						document.getElementById('resultaten').scrollIntoView()
+						document.querySelector('main>div:nth-of-type(2)>div:last-of-type').remove()
 					}
 				})
 			})
@@ -38,7 +42,3 @@ async function detect() {
 	}
 	renderLoop()
 }
-// activeren van de barcode
-const scanner = document.querySelector('button')
-
-scanner.addEventListener('click', detect)
