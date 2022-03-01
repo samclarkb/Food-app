@@ -17,6 +17,8 @@ I've made an online application Based on the user story
 
 **Rubric:** 
 
+![rubric](https://github.com/samclarkb/Food-app/blob/main/static/images/rubric.png)
+
 
 ## :bulb: Concept
 
