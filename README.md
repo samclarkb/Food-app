@@ -1,5 +1,5 @@
 
-# :computer: Food-app
+# :computer: Barcode scanner app
 
 ## Table of Contents 
 * [Assesment](https://github.com/samclarkb/Food-app#books-assessment)
