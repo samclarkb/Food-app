@@ -11,17 +11,17 @@
 * [License](https://github.com/samclarkb/Food-app#bookmark-license)
 
 ## :books: assignment 
-the user story is as follows: *'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'*
-
-I've made an online application Based on the user story 
+The assignment is as follows: *'Design and build a Single Page Web App based on a User Story.'*
+the user story that I've chosen is as follows: *'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'*
 
 **Rubric:** 
 
 ![rubric](https://github.com/samclarkb/Food-app/blob/main/static/images/rubric.png)
 
-
 ## :bulb: Concept
+This application allows users to scan barcodes of products from the grocery store. The applictaion is based on the following user story: *'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'*
 
+When the scan button is pressed by the user, the camera will be enabled. Now when the user brings the barcode in front of the camera, the appplication will show the product details of the specific product. In the example below you see how the application works and how the application looks like.
 
 ## :chart_with_upwards_trend: Process
 
