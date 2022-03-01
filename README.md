@@ -4,13 +4,13 @@
 ## Table of Contents 
 * [Assesment](https://github.com/samclarkb/Food-app#books-assessment)
 * [Concept](https://github.com/samclarkb/Food-app#bulb-concept)
-* [Proces (wiki)](https://github.com/samclarkb/Food-app#bulb-concept)
+* [Process (wiki)](https://github.com/samclarkb/Food-app#bulb-process)
 * [Wishlist](https://github.com/samclarkb/Food-app#memo-wishlist)
 * [Installation](https://github.com/samclarkb/Food-app#wrench-installation)
 * [Recources](https://github.com/samclarkb/Food-app#mag_right-recources)
 * [License](https://github.com/samclarkb/Food-app#bookmark-license)
 
-## :books: assignment 
+## :books: Assesment 
 The assignment is as follows: *'Design and build a Single Page Web App based on a User Story.'*
 the user story that I've chosen is as follows: *'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'*
 
