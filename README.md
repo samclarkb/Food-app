@@ -20,6 +20,10 @@
 ## :bulb: Concept
 
 
+## :chart_with_upwards_trend: Proces 
+
+Are you interested in my proces of making the application? Click here!
+
 ## :memo: Wishlist
 There are a few things I didn't get done due to lack of time:
 * 
