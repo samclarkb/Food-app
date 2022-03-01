@@ -11,10 +11,11 @@
 * [License](https://github.com/samclarkb/Food-app#bookmark-license)
 
 ## :books: assignment 
+the user story is as follows: *'As a foodie, I want to be able to scan a product while shopping so that I can read more information about the product and make a good choice whether it fits my diet.'*
 
+I've made an online application Based on the user story 
 
 **Rubric:** 
-
 
 
 ## :bulb: Concept
