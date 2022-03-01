@@ -4,7 +4,7 @@
 ## Table of Contents 
 * [Assesment](https://github.com/samclarkb/Food-app#books-assessment)
 * [Concept](https://github.com/samclarkb/Food-app#bulb-concept)
-* [Process (wiki)](https://github.com/samclarkb/Food-app#bulb-process)
+* [Process](https://github.com/samclarkb/Food-app#chart_with_upwards_trend-process)
 * [Wishlist](https://github.com/samclarkb/Food-app#memo-wishlist)
 * [Installation](https://github.com/samclarkb/Food-app#wrench-installation)
 * [Recources](https://github.com/samclarkb/Food-app#mag_right-recources)
