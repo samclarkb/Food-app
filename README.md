@@ -22,7 +22,7 @@
 
 ## :chart_with_upwards_trend: Process
 
-Are you interested in my proces of making the application? Click here!
+Are you interested in my proces of making the application? Click [here](https://github.com/samclarkb/Food-app/wiki/Process)!
 
 ## :memo: Wishlist
 There are a few things I didn't get done due to lack of time:
