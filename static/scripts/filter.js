@@ -4,7 +4,7 @@ const ulIngredients = document.querySelector('main > div:last-of-type ul:nth-of-
 const image = document.querySelector('main > div:last-of-type img')
 
 // Sorts out the correct product name (title)
-export const naam = data => {
+export const name = data => {
 	console.log(data.product.product_name)
 	if (data.product.product_name) {
 		h2.innerHTML = data.product.product_name
@@ -14,7 +14,7 @@ export const naam = data => {
 }
 
 // Sorts out the correct image
-export const afbeelding = data => {
+export const image = data => {
 	if (data.product.image_url) {
 		image.src = data.product.image_url
 	} else {
@@ -23,7 +23,7 @@ export const afbeelding = data => {
 }
 
 // Sorts out a list of allergens
-export const alergenen = data => {
+export const allergens = data => {
 	const allergens = data.product.allergens_imported
 	const allergensArray = allergens.split(',')
 	ulAllergens.innerHTML = ''
@@ -33,7 +33,7 @@ export const alergenen = data => {
 			listItemAllergy.innerHTML = '- ' + allergy
 			ulAllergens.appendChild(listItemAllergy)
 		} else {
-			ulAllergens.innerHTML = 'nope'
+			ulAllergens.innerHTML = 'Geen alergenen gevonden'
 		}
 	})
 }
@@ -53,6 +53,6 @@ export const ingredients = data => {
 			}
 		})
 	} else {
-		ulIngredients.innerHTML = 'nope'
+		ulIngredients.innerHTML = 'Geen ingredienten gevonden'
 	}
 }

@@ -1,5 +1,6 @@
-import { dataOphalen } from './fetch.js'
+import { getData } from './fetch.js'
 import { enableButton } from './ui.js'
+import { loadingState, removeLoadingState } from './loadingState.js'
 
 export async function detect() {
 	const barcodeDetector = new BarcodeDetector()
@@ -13,7 +14,10 @@ export async function detect() {
 
 	const video = document.createElement('video')
 	video.srcObject = mediaStream
+
+	loadingState()
 	await video.play()
+	removeLoadingState()
 
 	list.append(video)
 
@@ -25,13 +29,15 @@ export async function detect() {
 					if (!itemsFound.includes(barcode.rawValue)) {
 						itemsFound.push(barcode.rawValue)
 						barcodeValue = barcode.rawValue
-						dataOphalen(barcodeValue)
+						getData(barcodeValue)
 						video.remove()
 						window.location.hash = barcodeValue
 						enableButton()
+						console.log(document.querySelector('main>div:last-of-type'))
+						document.querySelector('main>div:last-of-type').classList.add('laatZien')
 						document.getElementById('resultaten').scrollIntoView()
 						document
-							.querySelector('main>div:nth-of-type(2)>div:nth-of-type(3)')
+							.querySelector('main>div:nth-of-type(2)>div:nth-of-type(4)')
 							.remove()
 					}
 				})
