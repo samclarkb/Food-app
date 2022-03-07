@@ -27,6 +27,7 @@ export async function detect() {
 						barcodeValue = barcode.rawValue
 						dataOphalen(barcodeValue)
 						video.remove()
+						window.location.hash = barcodeValue
 						enableButton()
 						document.getElementById('resultaten').scrollIntoView()
 						document.querySelector('main>div:nth-of-type(2)>div:last-of-type').remove()
@@ -42,3 +43,10 @@ export async function detect() {
 	}
 	renderLoop()
 }
+
+export const renderProduct = barcodeHash => {
+	dataOphalen(barcodeHash)
+	document.getElementById('resultaten').scrollIntoView({ block: 'end' })
+}
+
+// Source: https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/

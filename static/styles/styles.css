@@ -166,6 +166,7 @@ main > div:last-of-type > div {
 main > div:last-of-type > div a {
 	color: black;
 	text-decoration: underline;
+	margin: 2vw;
 }
 
 main > div:last-of-type div img {
@@ -173,4 +174,8 @@ main > div:last-of-type div img {
 	height: 40vh;
 	padding: 5vw 0;
 	border-radius: none;
+}
+
+ul {
+	list-style: none;
 }
