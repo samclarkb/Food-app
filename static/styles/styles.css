@@ -7,18 +7,27 @@
 /* landing pagina */
 main > div:first-of-type {
 	background: linear-gradient(0deg, rgba(255, 195, 160, 1) 0%, rgba(255, 175, 189, 1) 100%);
-	height: 15vh;
+	margin: 0 0 5vw;
 	display: flex;
 	justify-content: center;
 	border-radius: 0 0 7.5vw 7.5vw;
 	align-items: center;
 }
 
+/*  header  */
+main > div:first-of-type {
+	display: block;
+	color: white;
+	align-items: center;
+	text-align: center;
+}
+
 main > div:first-of-type h1,
 main > div:nth-of-type(2) h1 {
 	font-size: 11vw;
 	color: white;
-	font-weight: 200;
+	padding-top: 2vw;
+	font-weight: 300;
 }
 
 main > div:nth-of-type(2) {
@@ -43,7 +52,7 @@ main > div:first-of-type > div:nth-of-type(1) {
 	font-size: 5vw;
 }
 main > div:first-of-type > div:nth-of-type(2) {
-	transform: rotate(180deg);
+	/* transform: rotate(180deg); */
 	font-weight: 300;
 }
 
@@ -73,6 +82,7 @@ button > img {
 	padding-right: 2.5vw;
 }
 
+/* camera kader */
 main > div:nth-of-type(2) > div:nth-of-type(1) div {
 	width: 7vw;
 	height: 7vw;
@@ -80,7 +90,6 @@ main > div:nth-of-type(2) > div:nth-of-type(1) div {
 	border: solid 1vw rgba(255, 195, 160, 1);
 }
 
-/* camera kader */
 main > div:nth-of-type(2) > div:nth-of-type(1) div:nth-of-type(1) {
 	border-bottom: none;
 	border-right: none;
@@ -125,15 +134,12 @@ main > div:nth-of-type(2) > div:nth-of-type(2) button {
 }
 
 main > div:nth-of-type(2) > div:nth-of-type(2) {
-	/* height: 15vh; */
 	display: flex;
 	justify-content: center;
 }
 
 main > div:nth-of-type(2) > div:nth-of-type(3) {
-	/* background-color: lightgrey; */
-	/* height: 45vh; */
-	margin-top: 20vw;
+	margin-top: 12vw;
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
@@ -156,17 +162,41 @@ button:disabled {
 }
 
 main > div:last-of-type > div {
+	display: block;
+	color: black;
+	margin: 0 2vw;
+}
+
+main > div:last-of-type > div > div:first-of-type,
+main > div:last-of-type > div > div:last-of-type {
+	text-align: center;
+}
+
+main > div:last-of-type > div > div:last-of-type {
+	margin: 5vw 0;
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
-	/* flex-direction: column; */
-	color: black;
 }
 
 main > div:last-of-type > div a {
-	color: black;
-	text-decoration: underline;
-	margin: 2vw;
+	background: linear-gradient(0deg, rgba(255, 195, 160, 1) 0%, rgba(255, 175, 189, 1) 100%);
+	box-shadow: 1.75vw 2vw rgba(0, 0, 0, 0.1);
+	color: white;
+	border-style: none;
+	padding: 5vw 10vw;
+	font-size: 10vw;
+	border-radius: 10vw;
+	font-weight: 300;
+	margin: 5vw;
+}
+
+main > div:last-of-type > div h2 {
+	font-weight: 600;
+}
+
+main > div:last-of-type > div h3 {
+	font-weight: 400;
+	margin: 3vw 0;
 }
 
 main > div:last-of-type div img {
@@ -176,6 +206,14 @@ main > div:last-of-type div img {
 	border-radius: none;
 }
 
+main > div:first-of-type h3 {
+	font-weight: 200;
+	padding: 3vw;
+}
+
 ul {
 	list-style: none;
+	text-align: left;
+	font-weight: 100;
+	margin: 0 5vw;
 }

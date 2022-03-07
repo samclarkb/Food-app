@@ -12,5 +12,6 @@ export const scanButton = () => {
 // enbales the button when the product information was
 export const enableButton = () => {
 	const scanner = document.querySelector('button')
+	console.log(scanner)
 	scanner.disabled = false
 }

@@ -30,7 +30,7 @@ export const alergenen = data => {
 	allergensArray.forEach(allergy => {
 		let listItemAllergy = document.createElement('li')
 		if (allergy !== '') {
-			listItemAllergy.innerHTML = allergy
+			listItemAllergy.innerHTML = '- ' + allergy
 			ulAllergens.appendChild(listItemAllergy)
 		} else {
 			ulAllergens.innerHTML = 'nope'
@@ -48,7 +48,7 @@ export const ingredients = data => {
 		ingredientsArray.forEach(ingredient => {
 			let listItemIngredients = document.createElement('li')
 			if (ingredient !== '') {
-				listItemIngredients.innerHTML = ingredient
+				listItemIngredients.innerHTML = '- ' + ingredient
 				ulIngredients.appendChild(listItemIngredients)
 			}
 		})
