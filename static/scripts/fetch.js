@@ -1,5 +1,6 @@
 import { naam } from './filter.js'
 import { alergenen } from './filter.js'
+import { ingredients } from './filter.js'
 import { afbeelding } from './filter.js'
 import { errorState } from './errorState.js'
 
@@ -13,7 +14,7 @@ export function dataOphalen(barcodeValue) {
 				if (data.status_verbose === 'product not found') {
 					errorState()
 				} else {
-					naam(data), alergenen(data), afbeelding(data)
+					naam(data), alergenen(data), afbeelding(data), ingredients(data)
 				}
 			})
 			.catch(err => {

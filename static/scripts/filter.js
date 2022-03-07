@@ -1,5 +1,6 @@
 const h2 = document.querySelector('main > div:last-of-type h2')
-const ulAllergens = document.querySelector('main > div:last-of-type ul')
+const ulAllergens = document.querySelector('main > div:last-of-type ul:nth-of-type(1)')
+const ulIngredients = document.querySelector('main > div:last-of-type ul:nth-of-type(2)')
 const image = document.querySelector('main > div:last-of-type img')
 
 // Sorts out the correct product name (title)
@@ -21,7 +22,7 @@ export const afbeelding = data => {
 	}
 }
 
-// Sorts out the correct list of allergens
+// Sorts out a list of allergens
 export const alergenen = data => {
 	const allergens = data.product.allergens_imported
 	const allergensArray = allergens.split(',')
@@ -35,4 +36,23 @@ export const alergenen = data => {
 			ulAllergens.innerHTML = 'nope'
 		}
 	})
+}
+
+// Sorts out a list of ingredients
+export const ingredients = data => {
+	if (data.product.ingredients_text_en) {
+		const ingredients = data.product.ingredients_text_en
+
+		const ingredientsArray = ingredients.split(',')
+		ulIngredients.innerHTML = ''
+		ingredientsArray.forEach(ingredient => {
+			let listItemIngredients = document.createElement('li')
+			if (ingredient !== '') {
+				listItemIngredients.innerHTML = ingredient
+				ulIngredients.appendChild(listItemIngredients)
+			}
+		})
+	} else {
+		ulIngredients.innerHTML = 'nope'
+	}
 }
