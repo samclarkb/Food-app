@@ -31,7 +31,7 @@ main > div:nth-of-type(2) h1 {
 }
 
 main > div:nth-of-type(2) {
-	height: 100vh;
+	height: fit-content;
 }
 
 #resultaten {
@@ -216,4 +216,8 @@ ul {
 	text-align: left;
 	font-weight: 100;
 	margin: 0 5vw;
+}
+
+main > div:last-of-type {
+	display: none;
 }

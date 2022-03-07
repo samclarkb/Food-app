@@ -30,7 +30,9 @@ export async function detect() {
 						window.location.hash = barcodeValue
 						enableButton()
 						document.getElementById('resultaten').scrollIntoView()
-						document.querySelector('main>div:nth-of-type(2)>div:last-of-type').remove()
+						document
+							.querySelector('main>div:nth-of-type(2)>div:nth-of-type(3)')
+							.remove()
 					}
 				})
 			})
