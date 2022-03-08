@@ -1,10 +1,6 @@
-const h2 = document.querySelector('main > div:last-of-type h2')
-const ulAllergens = document.querySelector('main > div:last-of-type ul:nth-of-type(1)')
-const ulIngredients = document.querySelector('main > div:last-of-type ul:nth-of-type(2)')
-const image = document.querySelector('main > div:last-of-type img')
-
 // Sorts out the correct product name (title)
 export const name = data => {
+	const h2 = document.querySelector('main > div:last-of-type h2')
 	console.log(data.product.product_name)
 	if (data.product.product_name) {
 		h2.innerHTML = data.product.product_name
@@ -14,45 +10,51 @@ export const name = data => {
 }
 
 // Sorts out the correct image
-export const image = data => {
+export const picture = data => {
+	const image = document.querySelector('main > div:last-of-type img')
 	if (data.product.image_url) {
 		image.src = data.product.image_url
 	} else {
-		image.innerHTML = 'Geen product afbeelding beschikbaar'
+		image.src = './static/images/error.jpg'
 	}
 }
 
 // Sorts out a list of allergens
 export const allergens = data => {
 	const allergens = data.product.allergens_imported
-	const allergensArray = allergens.split(',')
-	ulAllergens.innerHTML = ''
-	allergensArray.forEach(allergy => {
-		let listItemAllergy = document.createElement('li')
-		if (allergy !== '') {
+	const ulAllergens = document.querySelector('main > div:last-of-type ul:nth-of-type(1)')
+	const h3Allergens = document.querySelector('main>div:last-of-type h3')
+	if (allergens) {
+		const allergensArray = allergens.split(',')
+		ulAllergens.innerHTML = ''
+		allergensArray.forEach(allergy => {
+			let listItemAllergy = document.createElement('li')
 			listItemAllergy.innerHTML = '- ' + allergy
 			ulAllergens.appendChild(listItemAllergy)
-		} else {
-			ulAllergens.innerHTML = 'Geen alergenen gevonden'
-		}
-	})
+			h3Allergens.innerHTML = 'Allergenen:'
+		})
+	} else {
+		h3Allergens.innerHTML = 'Geen allergenen gevonden'
+		ulAllergens.innerHTML = ''
+	}
 }
 
 // Sorts out a list of ingredients
 export const ingredients = data => {
+	const h3Ingredients = document.querySelector('main>div:last-of-type h3:nth-of-type(2)')
+	const ulIngredients = document.querySelector('main > div:last-of-type ul:nth-of-type(2)')
 	if (data.product.ingredients_text_en) {
 		const ingredients = data.product.ingredients_text_en
-
 		const ingredientsArray = ingredients.split(',')
 		ulIngredients.innerHTML = ''
 		ingredientsArray.forEach(ingredient => {
 			let listItemIngredients = document.createElement('li')
-			if (ingredient !== '') {
-				listItemIngredients.innerHTML = '- ' + ingredient
-				ulIngredients.appendChild(listItemIngredients)
-			}
+			listItemIngredients.innerHTML = '- ' + ingredient
+			ulIngredients.appendChild(listItemIngredients)
+			h3Ingredients.innerHTML = 'Ingredienten:'
 		})
 	} else {
-		ulIngredients.innerHTML = 'Geen ingredienten gevonden'
+		h3Ingredients.innerHTML = 'Geen ingredienten gevonden'
+		ulIngredients.innerHTML = ''
 	}
 }

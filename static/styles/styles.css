@@ -224,7 +224,7 @@ main > div:last-of-type {
 	margin-top: 10vw;
 }
 
-main > div:last-of-type.laatZien {
+main > div:last-of-type.show {
 	display: flex;
 }
 
@@ -237,6 +237,7 @@ main > div:last-of-type.laatZien {
 }
 /* Loader */
 main > div:nth-of-type(2) > div:nth-of-type(2) {
+	position: absolute;
 	margin: auto;
 	display: none;
 	border: 2.5vw solid #eaf0f6;
@@ -244,11 +245,15 @@ main > div:nth-of-type(2) > div:nth-of-type(2) {
 	border-top: 2.5vw solid rgba(255, 195, 160, 1);
 	width: 25vw;
 	height: 25vw;
-	animation: spinner 2s linear infinite;
+	top: 35%;
+	left: 35%;
+	animation: spinner 0.5s linear infinite;
+	transform: translateY(100vw);
 }
 
-.loading-true {
+main > div:nth-of-type(2) > div.loading-true {
 	display: block;
+	transform: translateY(100vw);
 }
 
 @keyframes spinner {

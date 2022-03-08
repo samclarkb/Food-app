@@ -1,4 +1,4 @@
-const loading = document.querySelector('main>div:nth-of-type(2)>div:nth-of-type(2)')
+const loading = document.getElementById('loading')
 
 // add class loading-true to show the loading icon
 export const loadingState = () => {

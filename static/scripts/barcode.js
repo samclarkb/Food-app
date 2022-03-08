@@ -3,6 +3,7 @@ import { enableButton } from './ui.js'
 import { loadingState, removeLoadingState } from './loadingState.js'
 
 export async function detect() {
+	loadingState()
 	const barcodeDetector = new BarcodeDetector()
 	const list = document.querySelector('main>div:nth-of-type(2)>div:nth-of-type(1)')
 	let itemsFound = []
@@ -15,7 +16,6 @@ export async function detect() {
 	const video = document.createElement('video')
 	video.srcObject = mediaStream
 
-	loadingState()
 	await video.play()
 	removeLoadingState()
 
@@ -34,11 +34,7 @@ export async function detect() {
 						window.location.hash = barcodeValue
 						enableButton()
 						console.log(document.querySelector('main>div:last-of-type'))
-						document.querySelector('main>div:last-of-type').classList.add('laatZien')
 						document.getElementById('resultaten').scrollIntoView()
-						document
-							.querySelector('main>div:nth-of-type(2)>div:nth-of-type(4)')
-							.remove()
 					}
 				})
 			})
@@ -53,7 +49,7 @@ export async function detect() {
 }
 
 export const renderProduct = barcodeHash => {
-	dataOphalen(barcodeHash)
+	getData(barcodeHash)
 	document.getElementById('resultaten').scrollIntoView({ block: 'end' })
 }
 
