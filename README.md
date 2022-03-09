@@ -32,11 +32,15 @@ Interested in my process of making the application? Click [here](https://github.
 
 ## :arrow_right: Activity diagram
 
+
+<img src="https://github.com/samclarkb/Food-app/blob/main/static/images/activityDiagram.png" width="800">
+
+
 ## :memo: Wishlist
 There are a few things I didn't get done due to lack of time:
 * insert barcode option
 * close scanner option
-* 
+* Available for Iphone
 
 ## :wrench: Installation
 
@@ -45,7 +49,8 @@ Clone this repository with the following command:
 `git clone https://github.com/samclarkb/Food-app.git`
 
 ## :mag_right: Recources 
-- 
+- W3schools. (2022). How TO - CSS Loader. How TO - CSS Loader. https://www.w3schools.com/howto/howto_css_loader.asp
+- Webmentions. (2021). Detecting barcodes from the webcam. Detecting barcodes from the webcam. https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
 
 ## :bookmark: License 
 Copyright (c) 2021 Sam Clark Boot, [MIT](https://github.com/samclarkb/Food-app/blob/main/LICENSE)
