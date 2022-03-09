@@ -5,21 +5,19 @@ import { loadingState, removeLoadingState } from './loadingState.js'
 export async function detect() {
 	loadingState()
 	const barcodeDetector = new BarcodeDetector()
-	const list = document.querySelector('main>div:nth-of-type(2)>div:nth-of-type(1)')
-	let itemsFound = []
+	const cameraFrame = document.querySelector('main>div:nth-of-type(2)>div:nth-of-type(1)') // Refers to the section of the placement of the camera
+	let itemsFound = [] // Variable of an empty array
+	let barcodeValue
 	const mediaStream = await navigator.mediaDevices.getUserMedia({
 		video: { facingMode: 'environment' },
 	})
-
-	let barcodeValue
-
 	const video = document.createElement('video')
 	video.srcObject = mediaStream
 
 	await video.play()
-	removeLoadingState()
+	removeLoadingState() // Removes the loading animation
 
-	list.append(video)
+	cameraFrame.append(video) // Adds a video to the page
 
 	function render() {
 		barcodeDetector
@@ -27,14 +25,13 @@ export async function detect() {
 			.then(barcodes => {
 				barcodes.forEach(barcode => {
 					if (!itemsFound.includes(barcode.rawValue)) {
+						// When the barcode doesn't contains an empty array then fire this function
 						itemsFound.push(barcode.rawValue)
 						barcodeValue = barcode.rawValue
 						getData(barcodeValue)
-						video.remove()
+						video.remove() // Removes the video
 						window.location.hash = barcodeValue
-						enableButton()
-						console.log(document.querySelector('main>div:last-of-type'))
-						document.getElementById('resultaten').scrollIntoView()
+						enableButton() // enables the button so you can scan an other product if you want to
 					}
 				})
 			})
@@ -53,4 +50,4 @@ export const renderProduct = barcodeHash => {
 	document.getElementById('resultaten').scrollIntoView({ block: 'end' })
 }
 
-// Source: https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
+// Source: Webmentions. (2021). Detecting barcodes from the webcam. Detecting barcodes from the webcam. https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/

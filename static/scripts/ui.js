@@ -5,7 +5,7 @@ export const scanButton = () => {
 	const scanner = document.querySelector('button')
 	scanner.addEventListener('click', detect)
 	scanner.addEventListener('click', function () {
-		scanner.disabled = true
+		scanner.disabled = true // disables the button so you can't use it again while the camera is enabled
 	})
 }
 

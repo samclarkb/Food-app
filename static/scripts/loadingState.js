@@ -1,11 +1,11 @@
 const loading = document.getElementById('loading')
 
-// add class loading-true to show the loading icon
+// Shows the loading state
 export const loadingState = () => {
-	loading.classList.add('loading-true')
+	loading.classList.add('loading-true') // Adds a classlist who changes the display into block instead of none
 }
 
-// remove class loading-true to delete the loading icon
+// Removes the loading state
 export const removeLoadingState = () => {
-	loading.classList.remove('loading-true')
+	loading.classList.remove('loading-true') // Adds a classlist who changes the display into none instead of block
 }

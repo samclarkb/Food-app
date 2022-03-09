@@ -34,7 +34,7 @@ main > div:nth-of-type(2) {
 	height: fit-content;
 }
 
-#resultaten {
+#results {
 	height: 100vh;
 }
 
@@ -228,14 +228,11 @@ main > div:last-of-type.show {
 	display: flex;
 }
 
-.nietLatenZien {
-	display: none;
-}
-
 .marginH2 {
 	margin: 20vw 0;
 }
 /* Loader */
+/* source: W3schools. (2022). How TO - CSS Loader. How TO - CSS Loader. https://www.w3schools.com/howto/howto_css_loader.asp */
 main > div:nth-of-type(2) > div:nth-of-type(2) {
 	position: absolute;
 	margin: auto;
