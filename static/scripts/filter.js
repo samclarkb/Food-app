@@ -1,6 +1,6 @@
 // Sorts out the correct product name (title)
 export const name = data => {
-	const h2 = document.querySelector('main > div:last-of-type h2')
+	const h2 = document.querySelector('main>section:last-of-type h2')
 	console.log(data.product.product_name)
 	if (data.product.product_name) {
 		h2.innerHTML = data.product.product_name
@@ -11,7 +11,7 @@ export const name = data => {
 
 // Sorts out the correct image
 export const picture = data => {
-	const image = document.querySelector('main > div:last-of-type img')
+	const image = document.querySelector('main>section:last-of-type img')
 	if (data.product.image_url) {
 		image.src = data.product.image_url
 	} else {
@@ -22,8 +22,8 @@ export const picture = data => {
 // Sorts out a list of allergens
 export const allergens = data => {
 	const allergens = data.product.allergens_imported
-	const ulAllergens = document.querySelector('main > div:last-of-type ul:nth-of-type(1)')
-	const h3Allergens = document.querySelector('main>div:last-of-type h3')
+	const ulAllergens = document.querySelector('main>section:last-of-type ul:nth-of-type(1)')
+	const h3Allergens = document.querySelector('main>section:last-of-type h3')
 	if (allergens) {
 		const allergensArray = allergens.split(',')
 		ulAllergens.innerHTML = ''
@@ -41,8 +41,8 @@ export const allergens = data => {
 
 // Sorts out a list of ingredients
 export const ingredients = data => {
-	const h3Ingredients = document.querySelector('main>div:last-of-type h3:nth-of-type(2)')
-	const ulIngredients = document.querySelector('main > div:last-of-type ul:nth-of-type(2)')
+	const h3Ingredients = document.querySelector('main>section:last-of-type h3:nth-of-type(2)')
+	const ulIngredients = document.querySelector('main>section:last-of-type ul:nth-of-type(2)')
 	if (data.product.ingredients_text_en) {
 		const ingredients = data.product.ingredients_text_en
 		const ingredientsArray = ingredients.split(',')

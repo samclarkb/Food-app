@@ -13,23 +13,23 @@ export function getData(barcodeValue) {
 			.then(response => response.json())
 			.then(data => {
 				if (data.status_verbose === 'product not found') {
-					document.querySelector('main>div:last-of-type').classList.add('show') // Adds a classlist who changes the display into block instead of none
-					document.getElementById('resultaten').scrollIntoView() // srolls into the results page
+					document.querySelector('main>section:last-of-type').classList.add('show') // Adds a classlist who changes the display into block instead of none
+					document.getElementById('results').scrollIntoView() // srolls into the results page
 					// ! aka not operator, removes the empty state after the first scan
 					if (!barcodeScanned) {
 						document
-							.querySelector('main>div:nth-of-type(2)>div:nth-of-type(4)') // This querySelector selects the emty state
-							.remove()
+							.querySelector('main>section:first-of-type>div:nth-of-type(4)')
+							.remove() // This querySelector selects the emty state
 						barcodeScanned = true
 					}
 					productNotFound()
 				} else {
-					document.querySelector('main>div:last-of-type').classList.add('show') // Adds a classlist who changes the display into block instead of none
+					document.querySelector('main>section:last-of-type').classList.add('show') // Adds a classlist who changes the display into block instead of none
 					// ! aka not operator, removes the empty state after the first scan
 					if (!barcodeScanned) {
 						document
-							.querySelector('main>div:nth-of-type(2)>div:nth-of-type(4)') // This querySelector selects the emty state
-							.remove()
+							.querySelector('main>section:first-of-type>div:nth-of-type(4)')
+							.remove() // This querySelector selects the emty state
 						barcodeScanned = true
 					}
 					document.getElementById('results').scrollIntoView() // srolls into the results page
