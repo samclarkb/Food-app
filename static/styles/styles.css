@@ -161,24 +161,24 @@ button:disabled {
 	opacity: 50%;
 }
 
-main > section:last-of-type > div {
+main > article > div {
 	display: block;
 	color: black;
 	margin: 0 2vw;
 }
 
-main > section:last-of-type > div > div:first-of-type,
-main > section:last-of-type > div > div:last-of-type {
+main > article > div > div:first-of-type,
+main > article > div > div:last-of-type {
 	text-align: center;
 }
 
-main > section:last-of-type > div > div:last-of-type {
+main > article > div > div:last-of-type {
 	margin: 5vw 0;
 	display: flex;
 	justify-content: center;
 }
 
-main > section:last-of-type > div a {
+main > article > div a {
 	background: linear-gradient(0deg, rgba(255, 195, 160, 1) 0%, rgba(255, 175, 189, 1) 100%);
 	box-shadow: 1.75vw 2vw rgba(0, 0, 0, 0.1);
 	color: white;
@@ -191,16 +191,16 @@ main > section:last-of-type > div a {
 	margin: 5vw;
 }
 
-main > section:last-of-type > div h2 {
+main > article > div h2 {
 	font-weight: 600;
 }
 
-main > section:last-of-type > div h3 {
+main > article > div h3 {
 	font-weight: 400;
 	margin: 3vw 0;
 }
 
-main > section:last-of-type div img {
+main > article div img {
 	width: 90vw;
 	height: 40vh;
 	padding: 5vw 0;
@@ -219,12 +219,12 @@ ul {
 	margin: 0 5vw;
 }
 
-main > section:last-of-type {
+main > article {
 	display: none;
 	margin-top: 10vw;
 }
 
-main > section:last-of-type .show {
+main > article .show {
 	display: flex;
 }
 

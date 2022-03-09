@@ -13,7 +13,7 @@ export function getData(barcodeValue) {
 			.then(response => response.json())
 			.then(data => {
 				if (data.status_verbose === 'product not found') {
-					document.querySelector('main>section:last-of-type').classList.add('show') // Adds a classlist who changes the display into block instead of none
+					document.querySelector('main>article').classList.add('show') // Adds a classlist who changes the display into block instead of none
 					document.getElementById('results').scrollIntoView() // srolls into the results page
 					// ! aka not operator, removes the empty state after the first scan
 					if (!barcodeScanned) {
@@ -24,7 +24,7 @@ export function getData(barcodeValue) {
 					}
 					productNotFound()
 				} else {
-					document.querySelector('main>section:last-of-type').classList.add('show') // Adds a classlist who changes the display into block instead of none
+					document.querySelector('main>article').classList.add('show') // Adds a classlist who changes the display into block instead of none
 					// ! aka not operator, removes the empty state after the first scan
 					if (!barcodeScanned) {
 						document
