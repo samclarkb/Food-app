@@ -14,6 +14,14 @@ export function getData(barcodeValue) {
 			.then(response => response.json())
 			.then(data => {
 				if (data.status_verbose === 'product not found') {
+					document.querySelector('main>div:last-of-type').classList.add('show')
+					document.getElementById('resultaten').scrollIntoView()
+					if (!barcodeScanned) {
+						document
+							.querySelector('main>div:nth-of-type(2)>div:nth-of-type(4)')
+							.remove()
+						barcodeScanned = true
+					}
 					productNotFound()
 				} else {
 					removeLoadingState()
