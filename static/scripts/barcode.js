@@ -4,7 +4,7 @@ import { loadingState, removeLoadingState } from './loadingState.js'
 
 export async function detect() {
 	loadingState()
-	const barcodeDetector = new BarcodeDetector()
+	const barcodeDetector = new BarcodeDetector() // Build in Javascript method
 	const cameraFrame = document.querySelector('main>section:nth-of-type(1)>div:nth-of-type(1)') // Refers to the section of the placement of the camera
 	let itemsFound = [] // Variable of an empty array
 	let barcodeValue
@@ -39,7 +39,7 @@ export async function detect() {
 	}
 
 	const renderLoop = () => {
-		requestAnimationFrame(renderLoop)
+		requestAnimationFrame(renderLoop) //
 		render()
 	}
 	renderLoop()
@@ -47,7 +47,7 @@ export async function detect() {
 
 export const renderProduct = barcodeHash => {
 	getData(barcodeHash)
-	document.getElementById('results').scrollIntoView()
+	document.getElementById('results').scrollIntoView() // Scrolls into the results page when a hash has inserted
 }
 
 // Source: Webmentions. (2021). Detecting barcodes from the webcam. Detecting barcodes from the webcam. https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
