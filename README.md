@@ -41,6 +41,7 @@ There are a few things I didn't get done due to lack of time:
 * insert barcode option
 * close scanner option
 * Available for Iphone
+* Resolve the remaining issues
 
 ## :wrench: Installation
 
