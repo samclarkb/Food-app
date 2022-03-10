@@ -13,4 +13,9 @@ export const productNotFound = () => {
 	h32.innerHTML = ''
 	ul1.innerHTML = ''
 	ul2.innerHTML = ''
+
+	const results = document.getElementById('results')
+
+	results.classList.add('show') // Adds a classlist who changes the display into block instead of none
+	results.scrollIntoView() // srolls into the results page
 }
