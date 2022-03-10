@@ -162,14 +162,11 @@ button:disabled {
 }
 
 main > article > div {
-	display: block;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 	color: black;
 	margin: 0 2vw;
-}
-
-main > article > div > div:first-of-type,
-main > article > div > div:last-of-type {
-	text-align: center;
 }
 
 main > article > div > div:last-of-type {
@@ -195,9 +192,9 @@ main > article > div h2 {
 	font-weight: 600;
 }
 
-main > article > div h3 {
+main > article > h3 {
 	font-weight: 400;
-	margin: 3vw 0;
+	margin: 2vw;
 }
 
 main > article div img {
