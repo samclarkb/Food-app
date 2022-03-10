@@ -46,8 +46,9 @@ export async function detect() {
 }
 
 export const renderProduct = barcodeHash => {
+	const results = document.getElementById('results')
 	getData(barcodeHash)
-	document.getElementById('results').scrollIntoView() // Scrolls into the results page when a hash has inserted
+	results.scrollIntoView() // Scrolls into the results page when a hash has inserted
 }
 
 // Source: Webmentions. (2021). Detecting barcodes from the webcam. Detecting barcodes from the webcam. https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
