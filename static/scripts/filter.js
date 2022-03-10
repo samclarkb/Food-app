@@ -1,7 +1,6 @@
 // Sorts out the correct product name (title)
 export const name = data => {
 	const h2 = document.querySelector('main>article h2')
-	console.log(data.product.product_name)
 	if (data.product.product_name) {
 		h2.innerHTML = data.product.product_name
 	} else {

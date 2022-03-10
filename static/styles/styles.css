@@ -224,8 +224,8 @@ main > article {
 	margin-top: 10vw;
 }
 
-main > article .show {
-	display: flex;
+main > article.show {
+	display: block;
 }
 
 .marginH2 {

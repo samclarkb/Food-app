@@ -9,7 +9,7 @@ export async function detect() {
 	let itemsFound = [] // Variable of an empty array
 	let barcodeValue
 	const mediaStream = await navigator.mediaDevices.getUserMedia({
-		video: { facingMode: 'environment' },
+		video: { facingMode: 'environment' }, // enables the back side of the camera of a phone
 	})
 	const video = document.createElement('video')
 	video.srcObject = mediaStream
@@ -47,7 +47,7 @@ export async function detect() {
 
 export const renderProduct = barcodeHash => {
 	getData(barcodeHash)
-	document.getElementById('results').scrollIntoView({ block: 'end' })
+	document.getElementById('results').scrollIntoView()
 }
 
 // Source: Webmentions. (2021). Detecting barcodes from the webcam. Detecting barcodes from the webcam. https://daily-dev-tips.com/posts/detecting-barcodes-from-the-webcam/
